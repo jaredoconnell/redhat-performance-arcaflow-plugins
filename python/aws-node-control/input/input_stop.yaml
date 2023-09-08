@@ -2,8 +2,8 @@
 
 action: "stop"
 wait: true
-instance_id: "i-094dd6107233478fd"
-aws_access_key_id: "***REMOVED***"
-aws_access_private_key: "***REMOVED***"
+instance_id: ""
+aws_access_key_id: ""
+aws_access_private_key: ""
 aws_region: "us-east-2"
 wait_timeout: 60
