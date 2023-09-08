@@ -1,0 +1,9 @@
+# yaml-language-server:$schema=input_schema.json
+
+action: "terminate"
+wait: true
+instance_id: "i-094dd6107233478fd"
+aws_access_key_id: "***REMOVED***"
+aws_access_private_key: "***REMOVED***"
+aws_region: "us-east-2"
+wait_timeout: 60

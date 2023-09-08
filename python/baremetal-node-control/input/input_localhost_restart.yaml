@@ -1,0 +1,9 @@
+# yaml-language-server:$schema=input_schema.json
+
+action: "stop"
+wait: true
+addr: "127.0.0.1:6230"
+user: "admin"
+password: "password"
+
+  

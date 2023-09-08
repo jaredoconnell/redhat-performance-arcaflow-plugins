@@ -1,0 +1,2 @@
+arcaflow_plugin_sdk
+python-ipmi==0.5.2

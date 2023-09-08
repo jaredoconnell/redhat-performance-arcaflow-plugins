@@ -1,0 +1,71 @@
+{
+  "type": "object",
+  "properties": {
+    "wait": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "string",
+          "enum": [
+            "yes",
+            "true",
+            "on",
+            "enable",
+            "enabled",
+            "1",
+            "no",
+            "false",
+            "off",
+            "disable",
+            "disabled",
+            "0"
+          ]
+        },
+        {
+          "type": "integer",
+          "maximum": 1,
+          "minumum": 0
+        }
+      ],
+      "title": "wait",
+      "description": "Whether to wait for it to complete its action."
+    },
+    "action": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": [],
+      "title": "action",
+      "description": "The action to execute."
+    },
+    "addr": {
+      "type": "string",
+      "title": "addr",
+      "description": "The address of the IPMI/BMC interface."
+    },
+    "user": {
+      "type": "string",
+      "title": "user",
+      "description": "The user to authenticate the IPMI/BMC interface."
+    },
+    "password": {
+      "type": "string",
+      "title": "password",
+      "description": "The password to authenticate the IPMI/BMC interface."
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "wait",
+    "action",
+    "addr",
+    "user",
+    "password"
+  ],
+  "title": "Hello world! input",
+  "description": "Says hello :)",
+  "$id": "hello-world",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,182 @@
+{
+  "$defs": {
+    "NodeActionParams": {
+      "type": "object",
+      "properties": {
+        "action": {
+          "type": "string",
+          "enum": [
+            "stop",
+            "start",
+            "reboot",
+            "terminate"
+          ],
+          "title": "action",
+          "description": "The action to execute."
+        },
+        "instance_id": {
+          "type": "string",
+          "title": "addr",
+          "description": "The AWS instance ID."
+        },
+        "aws_access_key_id": {
+          "type": "string",
+          "title": "aws_access_public_key",
+          "description": "The AWS public key/key id."
+        },
+        "aws_access_private_key": {
+          "type": "string",
+          "title": "aws_access_private_key",
+          "description": "The AWS private/access key."
+        },
+        "aws_region": {
+          "type": "string",
+          "title": "aws_region",
+          "description": "The AWS region the instance is in."
+        },
+        "wait": {
+          "anyOf": [
+            {
+              "title": "Boolean",
+              "type": "boolean"
+            },
+            {
+              "title": "String",
+              "type": "string",
+              "enum": [
+                "yes",
+                "y",
+                "true",
+                "on",
+                "enable",
+                "enabled",
+                "1",
+                "no",
+                "n",
+                "false",
+                "off",
+                "disable",
+                "disabled",
+                "0"
+              ]
+            },
+            {
+              "title": "Integer",
+              "type": "integer",
+              "maximum": 1,
+              "minimum": 0
+            }
+          ],
+          "title": "wait",
+          "description": "Whether to wait for it to complete its action."
+        },
+        "wait_timeout": {
+          "type": "integer",
+          "default": 30,
+          "title": "wait_timeout",
+          "description": "The amount of time in seconds to spend waiting for the desired state."
+        }
+      },
+      "required": [
+        "action",
+        "instance_id",
+        "aws_access_key_id",
+        "aws_access_private_key",
+        "aws_region",
+        "wait"
+      ],
+      "additionalProperties": false,
+      "dependentRequired": {}
+    }
+  },
+  "type": "object",
+  "properties": {
+    "action": {
+      "type": "string",
+      "enum": [
+        "stop",
+        "start",
+        "reboot",
+        "terminate"
+      ],
+      "title": "action",
+      "description": "The action to execute."
+    },
+    "instance_id": {
+      "type": "string",
+      "title": "addr",
+      "description": "The AWS instance ID."
+    },
+    "aws_access_key_id": {
+      "type": "string",
+      "title": "aws_access_public_key",
+      "description": "The AWS public key/key id."
+    },
+    "aws_access_private_key": {
+      "type": "string",
+      "title": "aws_access_private_key",
+      "description": "The AWS private/access key."
+    },
+    "aws_region": {
+      "type": "string",
+      "title": "aws_region",
+      "description": "The AWS region the instance is in."
+    },
+    "wait": {
+      "anyOf": [
+        {
+          "title": "Boolean",
+          "type": "boolean"
+        },
+        {
+          "title": "String",
+          "type": "string",
+          "enum": [
+            "yes",
+            "y",
+            "true",
+            "on",
+            "enable",
+            "enabled",
+            "1",
+            "no",
+            "n",
+            "false",
+            "off",
+            "disable",
+            "disabled",
+            "0"
+          ]
+        },
+        {
+          "title": "Integer",
+          "type": "integer",
+          "maximum": 1,
+          "minimum": 0
+        }
+      ],
+      "title": "wait",
+      "description": "Whether to wait for it to complete its action."
+    },
+    "wait_timeout": {
+      "type": "integer",
+      "default": 30,
+      "title": "wait_timeout",
+      "description": "The amount of time in seconds to spend waiting for the desired state."
+    }
+  },
+  "required": [
+    "action",
+    "instance_id",
+    "aws_access_key_id",
+    "aws_access_private_key",
+    "aws_region",
+    "wait"
+  ],
+  "additionalProperties": false,
+  "dependentRequired": {},
+  "title": "Run IPMI node action input",
+  "description": "Runs IPMI node actions",
+  "$id": "ipmi-node-action",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}
